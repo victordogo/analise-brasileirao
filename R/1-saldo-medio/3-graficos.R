@@ -3,9 +3,9 @@
 library(tidyverse)
 library(ggimage)
 
-df_2003 <- read_rds('data/df_2003.rds')
-df_2013 <- read_rds('data/df_2013.rds')
-df_2018 <- read_rds('data/df_2018.rds')
+df_2003 <- read_rds('data/1-saldo-medio/df_2003.rds')
+df_2013 <- read_rds('data/1-saldo-medio/df_2013.rds')
+df_2018 <- read_rds('data/1-saldo-medio/df_2018.rds')
 
 ### Grafico 2003
 
@@ -32,7 +32,7 @@ df_2003 |>
   coord_cartesian(xlim=c(-1.25,1.25),
                   ylim=c(-1.875, 0.5))
 
-ggsave('graph/2003.png', dpi=300)
+ggsave('graph/1-saldo-medio/2003.png', dpi=300, bg='white')
 
 ### Grafico 2013
 
@@ -59,7 +59,7 @@ df_2013 |>
   coord_cartesian(xlim=c(-1.25,1.25),
                   ylim=c(-1.875, 0.5))
 
-ggsave('graph/2013.png', dpi=300)
+ggsave('graph/1-saldo-medio/2013.png', dpi=300, bg='white')
 
 ### Grafico 2018
 
@@ -86,4 +86,4 @@ df_2018 |>
   coord_cartesian(xlim=c(-1.25,1.25),
                   ylim=c(-1.875, 0.5))
 
-ggsave('graph/2018.png', dpi=300)
+ggsave('graph/1-saldo-medio/2018.png', dpi=300, bg='white')

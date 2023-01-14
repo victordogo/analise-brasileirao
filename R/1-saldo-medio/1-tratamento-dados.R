@@ -2,7 +2,7 @@
 
 library(tidyverse)
 
-df <- read_csv('data/campeonato-brasileiro-full.csv') |>
+df <- read_csv('data_raw/campeonato-brasileiro-full.csv') |>
   select(data, mandante, visitante, mandante_Placar,
          visitante_Placar) |>
   mutate(data=lubridate::dmy(data),
@@ -11,7 +11,7 @@ df <- read_csv('data/campeonato-brasileiro-full.csv') |>
          )
 
 df |>
-  write_rds('data/df.rds')
+  write_rds('data/1-saldo-medio/df.rds')
 
 ### DESDE 2003 ATE 2022
 
@@ -83,7 +83,7 @@ df_saldo <- df_saldo |>
 ### Exportando banco de dados
 
 df_saldo |>
-  write_rds('data/df_2003.rds')
+  write_rds('data/1-saldo-medio/df_2003.rds')
 
 ### DESDE 2013 ATE 2022
 
@@ -158,7 +158,7 @@ df_saldo <- df_saldo |>
 ### Exportando banco de dados
 
 df_saldo |>
-  write_rds('data/df_2013.rds')
+  write_rds('data/1-saldo-medio/df_2013.rds')
 
 ### DESDE 2018 ATE 2022
 
@@ -233,4 +233,4 @@ df_saldo <- df_saldo |>
 ### Exportando banco de dados
 
 df_saldo |>
-  write_rds('data/df_2018.rds')
+  write_rds('data/1-saldo-medio/df_2018.rds')
